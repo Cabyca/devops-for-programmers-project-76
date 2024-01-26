@@ -4,5 +4,5 @@ prepare:
 playbook:
 	ansible-playbook playbook.yml -i inventory.ini
 
-redmine:
+deploy:
         ansible-playbook playbookred.yml -i inventory.ini
