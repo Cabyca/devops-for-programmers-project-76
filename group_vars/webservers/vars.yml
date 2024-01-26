@@ -1,0 +1,1 @@
+cabyca_vault_db_password: "{{ password_db }}"
