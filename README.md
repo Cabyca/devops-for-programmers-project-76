@@ -22,4 +22,16 @@ make prepare
 make deploy 
 ```
 
+## Работа с зашифрованными данными (в данном случае пароль к БД):
+
+### деплой приложения (требуется пароль к БД)
+```bash
+ansible-playbook -i inventory --ask-vault-pass playbook.yml
+```
+### изменение зашифрованного файла
+
+```bash
+ansible-vault edit group_vars/webservers/vault.yml
+```
+
 [Ссылка на задеплоенное приложение cabyca.ru](https://cabyca.ru)
