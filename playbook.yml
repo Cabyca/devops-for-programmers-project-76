@@ -1,8 +1,0 @@
-- hosts: all
-
-  pre_tasks:
-    - ansible.builtin.apt:
-        update_cache: yes
-
-  roles:
-    - geerlingguy.pip

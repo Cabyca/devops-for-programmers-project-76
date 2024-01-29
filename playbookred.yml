@@ -1,5 +1,12 @@
 - hosts: all
 
+  pre_tasks:
+   - ansible.builtin.apt:
+        update_cache: yes
+
+  roles:
+   - geerlingguy.pip
+
   tasks:
    - name: Genarate .env file
      ansible.builtin.template:
