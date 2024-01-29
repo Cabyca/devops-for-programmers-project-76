@@ -3,8 +3,6 @@
   tasks:
    - name: Genarate .env file
      ansible.builtin.template:
-#        src: ./.env
-#        dest: ~/.env
         src: ./templates/.env.j2
         dest: ~/.env
 
@@ -17,3 +15,18 @@
         ports:
          - "80:3000"
         env_file: ~/.env
+
+   - name: Import the Datadog Agent role from the Datadog collection
+     import_role:
+        name: datadog.dd.agent
+  vars:
+    datadog_app_key: "f3bc332ebabe4bfb183fffcb96da35837a809c7c"
+    datadog_api_key: "c1391f3d52853ec046e6478d5597df62"
+    datadog_site: "datadoghq.eu"
+    datadog_checks:
+     http_check:
+       init_config:
+
+       instances:
+         - name: Redmine
+           url: http://localhost
