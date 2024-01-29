@@ -1,1 +1,5 @@
-cabyca_vault_db_password: "{{ password_db }}"
+db_name: cabyca
+db_password: "{{ cabyca_vault_db_password }}"
+db_database: db3
+db_port: 6432
+db_postgres: rc1d-uyjsmeh5ny19b371.mdb.yandexcloud.net
