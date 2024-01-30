@@ -3,3 +3,14 @@ db_password: "{{ cabyca_vault_db_password }}"
 db_database: db3
 db_port: 6432
 db_postgres: rc1d-uyjsmeh5ny19b371.mdb.yandexcloud.net
+
+datadog_app_key: "f3bc332ebabe4bfb183fffcb96da35837a809c7c"
+datadog_api_key: "c1391f3d52853ec046e6478d5597df62"
+datadog_site: "datadoghq.eu"
+datadog_checks:
+  http_check:
+    init_config:
+
+    instances:
+      - name: Redmine
+        url: http://localhost
