@@ -29,7 +29,7 @@
         - prepare
 
 
-- hosts: all
+- hosts: webservers
 
   roles:
    - name: datadog.datadog
