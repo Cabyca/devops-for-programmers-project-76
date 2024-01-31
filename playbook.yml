@@ -28,8 +28,10 @@
      tags:
         - prepare
 
-   - name: Import the Datadog Agent role from the Datadog collection
-     import_role:
-        name: datadog.dd.agent
+
+- hosts: all
+
+  roles:
+   - name: datadog.datadog
      tags:
         - deploy
