@@ -5,7 +5,7 @@
         update_cache: yes
 
   roles:
-   - geerlingguy.pip
+   - name: geerlingguy.pip
      tags:
         - python
 
