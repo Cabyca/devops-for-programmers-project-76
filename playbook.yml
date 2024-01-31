@@ -6,13 +6,16 @@
 
   roles:
    - geerlingguy.pip
+     tags:
+        - python
 
   tasks:
    - name: Genarate .env file
      ansible.builtin.template:
         src: ./templates/.env.j2
         dest: ~/.env
-
+     tags:
+        - prepare
 
    - name: Start a container
      community.docker.docker_container:
@@ -22,7 +25,11 @@
         ports:
          - "80:3000"
         env_file: ~/.env
+     tags:
+        - prepare
 
    - name: Import the Datadog Agent role from the Datadog collection
      import_role:
         name: datadog.dd.agent
+     tags:
+        - deploy
