@@ -14,3 +14,6 @@ datadog_checks:
     instances:
       - name: Redmine
         url: http://localhost
+
+pip_install_packages:
+  - name: docker
