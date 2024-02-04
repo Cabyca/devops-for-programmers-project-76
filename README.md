@@ -16,6 +16,17 @@
 make prepare 
 ```
 
+## Варианты запуска playbook.yml
+
+### Установка python
+```bash
+make python
+```
+### Развертывание/обновление Redmine
+```bash
+make redmine
+```
+
 ### Деплой приложения Redmine (требуется пароль к БД)
 ```bash
 make deploy

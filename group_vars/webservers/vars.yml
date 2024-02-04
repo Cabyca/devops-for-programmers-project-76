@@ -4,6 +4,8 @@ db_database: db3
 db_port: 6432
 db_postgres: rc1d-uyjsmeh5ny19b371.mdb.yandexcloud.net
 
+external_application_port: 80
+
 datadog_app_key: "{{ datadog_app_key_vault }}"
 datadog_api_key: "{{ datadog_api_key_vault }}"
 datadog_site: "datadoghq.eu"
