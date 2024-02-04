@@ -25,7 +25,7 @@
         image: redmine
         state: started
         ports:
-         - {{ external_application_port }}:3000
+         - "{{ external_application_port }}":3000
         env_file: ~/.env
      tags: [prepare, redmine]
 #        - prepare
