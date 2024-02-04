@@ -31,7 +31,7 @@
 #        - prepare
 
 
-#- hosts: webservers
+- hosts: webservers
 
   roles:
    - name: datadog.datadog
