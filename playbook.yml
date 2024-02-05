@@ -16,8 +16,7 @@
         src: ./templates/.env.j2
         dest: ~/.env
         mode: 0640
-     tags: [prepare, redmine]
-#       - prepare
+     tags: [redmine]
 
    - name: Start a container
      community.docker.docker_container:
@@ -25,11 +24,9 @@
         image: redmine
         state: started
         ports:
-         - "{{ external_application_port }}"
+         - "{{ external_application_port }}:3000"
         env_file: ~/.env
-     tags: [prepare, redmine]
-#        - prepare
-
+     tags: [redmine]
 
 - hosts: webservers
 
